@@ -34,7 +34,6 @@ body{
 
 
 #sec2{
-  height: 38rem;
   width: 100%;
   background: #000;
 }
@@ -62,9 +61,49 @@ body{
   width: 100px;
   padding-top: 25px;
   margin: 0 auto;
+  font-weight: lighter;
 }
 
+#vidColumns {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-column-gap: 1em;
+  position: relative;
+}
+
+
 #featuredVideoContainer {
+  margin: 30px auto;
+  width: 80%;
+}
+
+#featuredVideo{
+  width: 100%;
+}
+
+#videoRightColumn {
+   margin-top: 40%;
+  margin-right: 30%;
+}
+
+#videoSidebar {
+  position: relative;
+  height: 15rem;
+  overflow-y: scroll;
+  border: 1px solid white;
+  max-height: 60%;
+}
+
+
+.viditem{
+  width: 95%;
+  margin: 1.25em auto;
+}
+
+
+
+
+/*#featuredVideoContainer {
     margin: 0 auto;
     text-align: center;
 }
