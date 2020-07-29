@@ -2,10 +2,11 @@
 <html>
 <head>
 	<title>APOLLO BAY</title>
-</head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -19,10 +20,10 @@
         <a class="nav-link" href="#sec2">VIDEOS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">MUSIC</a>
+        <a class="nav-link" href="#sec3">MUSIC</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">MEMBERS</a>
+        <a class="nav-link" href="#sec4">MEMBERS</a>
       </li>
     </ul>
   </div>
@@ -37,14 +38,14 @@
  	<div id="vidColumns">
  		<div id="featuredVideoContainer">
  		<video id="featuredVideo" controls>
- 			<source src="assets/ab-videos/ab-winnabego-pb1.mp4" type="video/mp4">
+ 			<source id="mainVidSource" src="assets/ab-videos/ab-winnabego-pb1.mp4" type="video/mp4">
  		</video>
  		</div>
  		<div id="videoRightColumn">
  		<p>MORE VIDEOS</p>
  		<div id="videoSidebar">
- 				<img class="viditem" src="assets/testThumb.jpg">
- 				<img class="viditem" src="assets/testThumb.jpg">
+ 				<img id="vid1" class="viditem" src="https://images.unsplash.com/photo-1578850390049-d5915d788268?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80">
+ 				<img id="vid2" class="viditem" src="https://images.unsplash.com/photo-1593840108331-52227779615f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
  				<img class="viditem" src="assets/testThumb.jpg">
  				<img class="viditem" src="assets/testThumb.jpg">
  				<img class="viditem" src="assets/testThumb.jpg">
@@ -55,30 +56,6 @@
  		 </div>
  		</div>
  	</div>
-
-
- 	<!--<div id="videoMenu">
- 	 <div class="scrollmenu">
-  <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
-  <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
-  <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
-  <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
-  <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
-  <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
-  <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
-  <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
-  <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
-  <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
-  <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
-  <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
-  <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
-  <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
-  <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
-  
-     </div>
- 	</div>-->
-
-   
  </div>
   
  <div id="sec3">

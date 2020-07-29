@@ -1,9 +1,5 @@
 var albumPicasso = {
-     title: 'The Colors',
      artist: 'Apollo Bay',
-     label: 'Cubism',
-     year: '1881',
-     albumArtUrl: 'assets/images/album_covers/01.png',
      songs: [
        { title: 'Me Again', duration: 161.71, audioUrl: 'assets/music/blue' },
           { title: 'Karma', duration: 103.96, audioUrl: 'assets/music/green' },
@@ -352,5 +348,19 @@ var setSong = function(songNumber) {
   });
      var albums = [albumPicasso];
      var index = 1;
+
+
+
+     var vid1 = document.querySelector("#vid1");
+     var vid2 = document.querySelector("#vid2");
+     var mainVid = document.querySelector("#featuredVideo");
+
+     vid1.addEventListener("click", function(){
+       mainVid.src = "assets/ab-videos/ab-downOnNila-pb1.mp4";
+     });
+
+     vid2.addEventListener("click", function(){
+       mainVid.src = "assets/ab-videos/ab-moldyMoney-pb1.mp4";
+     });
 
     

@@ -110,26 +110,6 @@ body{
 
 
 
-.album-view-details {
-    position: relative;
-    top: 1.5rem;
-    padding: 1rem;
-}
-
-.album-view-details .album-view-title {
-    font-weight: 300;
-    font-size: 2rem;
-}
-
-.album-view-details .album-view-artist {
-    font-weight: 300;
-    font-size: 1.5rem;
-}
-
-.album-view-details .album-view-release-info {
-    font-weight: 300;
-    font-size: 0.75rem;
-}
 
 .album-view-song-list {
      width: 90%;
@@ -187,6 +167,7 @@ body{
      height: 200px;
      background-color: rgba(0, 0, 0, 0.3);
      z-index: 100;
+     margin-top: 2rem;
  }
 
  .player-bar a {
@@ -288,7 +269,7 @@ body{
 
 .seek-bar .fill {
     background-color: black;
-    width: 36%;
+    width: 0px;
     height: 0.25rem;
     border-radius: 2px;
 }
@@ -298,7 +279,6 @@ body{
     height: 0.5rem;
     width: 0.5rem;
     background-color: black;
-    left: 36%;
     top: 50%;
     margin-left: -0.25rem;
     margin-top: -0.25rem;
