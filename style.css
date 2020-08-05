@@ -1,51 +1,59 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
-
-
-html {
+html, body{
   scroll-behavior: smooth; 
-}
-
-body{
   margin: 0;
   letter-spacing: 5px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  overflow-x: hidden;
 }
 
 #sec1{
- height: 50rem;
- position: relative
+  width: 100%;
+  position: relative;
+  padding: 25rem 0 25rem 0;
+  text-align: center;
 }
 
+
 #sec1 h1 {
-  font-family: 'Julius Sans One', sans-serif;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  text-shadow: 0px 3px 0px #b2a98f,
+ font-size: 5rem;
+ text-shadow: 0px 3px 0px #b2a98f,
                0px 14px 10px rgba(0,0,0,0.15),
                0px 24px 2px rgba(0,0,0,0.1),
                0px 34px 30px rgba(0,0,0,0.1);
-  font-size: 5rem;
+ font-family: 'Julius Sans One', sans-serif;
+}
+
+#h1Container {
+  width: 100%;
 }
 
 
 #sec2{
   width: 100%;
   background: #000;
+  text-align: center;
 }
 
+#sec2 h3{
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #383e44;
+}
 
 
 #sec3{
-  border: 1px solid green;
+  
 }
 
 #sec4{
-  border: 1px solid orange;
+  background: #000;
+  color: white;
+  width: 100%;
 }
 
 .navbar-toggler:focus,
@@ -56,20 +64,17 @@ body{
 }
 
 
-#sec2 h1 {
+.sectionH2 {
   color: white;
-  width: 100px;
+  width: 200px;
   margin: 0 auto;
   padding-top: 2rem;
   font-weight: lighter;
+  text-align: center;
 }
 
-#sec3 h1{
+#sec3 h2{
   color: black;
-  width: 100px;
-  margin: 0 auto;
-  padding-top: 2rem;
-  font-weight: lighter;
 }
 
 #vidColumns {
@@ -82,31 +87,67 @@ body{
 
 #featuredVideoContainer {
   margin: 30px auto;
-  width: 80%;
+  width: 70%;
 }
 
 #featuredVideo{
   width: 100%;
 }
 
-#videoRightColumn {
-   margin-top: 40%;
-  margin-right: 30%;
-}
 
-#videoSidebar {
-  position: relative;
-  height: 15rem;
-  overflow-y: scroll;
-  border: 1px solid white;
-  max-height: 60%;
+
+
+#videoScollBarContainer{
+   height: 150px;
+    width: 75%;
+    position: relative;
+    margin: 0 auto;
 }
 
 
-.viditem{
-  width: 95%;
-  margin: 1.25em auto;
+#videoScollBar{
+width: 100%;
+position: absolute;
+overflow:scroll;
+overflow-y: hidden;
+white-space:nowrap; 
+
 }
+
+.vidItem{
+  height: 100%;
+  display: inline-block;
+}
+
+.vidItem img{
+  width: 12rem;
+  border-radius: 3%;
+  
+}
+
+
+
+#memberColumns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2em;
+  grid-row-gap: .5rem;
+  justify-items: center;
+  padding: 3rem;
+
+}
+
+#memberContainer {
+}
+
+.memberItem {
+  width: 10rem;
+}
+
+.memberImg {
+  width: 100%;
+}
+
 
 
 
@@ -338,7 +379,34 @@ body{
 }
 
 
-@media (max-width: 640px) {
+
+@media (max-width: 320px){
+
+   #memberColumns{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #sec1{
+    padding: 15rem 0 15rem 0;
+  }
+
+  #sec1 h1{
+       text-align: left;
+       font-size: 1rem;
+     }
+
+     #h1Container {
+      margin: 0 auto;
+     }
+}
+
+@media (max-width: 600px) {
+
+  #sec1 h1{
+       text-align: left;
+       font-size: 4rem;
+     }
+
     .player-bar {
         padding: 1rem;
         background-color: rgba(0,0,0,0.6);
@@ -370,10 +438,33 @@ body{
 
     .player-bar .currently-playing .artist-song-mobile {
         display: block;
+        margin-top: 1.5rem;
+    }
+
+    .control-group.volume{
+      margin-top: 1.5rem;
     }
 }
 
  @media (max-width: 640px) and (min-width: 320px) {
+  #sec1{
+    padding: 15rem 0 15rem 0;
+  }
+
+  #sec1 h1{
+       text-align: left;
+       font-size: 3rem;
+     }
+
+     #h1Container {
+      margin: 0 auto;
+      width: 14rem;
+     }
+
+     .vidItem img{
+      width: 5rem;
+  
+      }
      .album-view-details {
          text-align: center;
      }
@@ -381,6 +472,7 @@ body{
      .album-view-title {
          margin-top: 0;
      }
+
  }
 
  @media (max-width: 1024px) and (min-width: 320px) {
@@ -390,46 +482,97 @@ body{
          width: 80%;
          margin: auto;
      }
- }
-
-
-
-
-/*#featuredVideoContainer {
-    margin: 0 auto;
-    text-align: center;
-}
-
-#featuredVideo {
- height: 25rem;
- width: 35rem;
 }
 
 
-div.scrollmenu {
-  background-color: #000;
-  overflow: auto;
-  white-space: nowrap;
-  height: 10vh;
-  margin-top: 25px;
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 320px){
+
+  #h1Container{
+    width: 75%;
+  }
+  #sec1 h1{
+      text-align: left;
+       font-size: 3rem;
+       margin: 0 auto;
+     }
+  
+  }
+
+
+@media(min-width: 320px){
+
+  .vidItem img{
+  width: 8rem;
+  
 }
 
-div.scrollmenu img {
-  max-width:100%;
-max-height:100%;
+   #memberColumns{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .memberItem{
+    width: 75%;
+  }
+
+  #featuredVideoContainer{
+    width: 100%;
+  }
+
 }
 
-div.scrollmenu a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
+@media(min-width: 600px){
+
+
+  .vidItem img{
+  width: 10rem;
+  
+}
+   #memberColumns{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #featuredVideoContainer{
+    width: 75%;
+  }
+
+
 }
 
-div.scrollmenu a:hover {
-  background-color: #777;
+
+@media(min-width: 980px){
+
+  .vidItem img{
+  width: 12rem;
+  
+}
+   #memberColumns{
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+}
+
+@media(min-width: 1150px){
+   #memberColumns{
+    grid-template-columns: repeat(4, 1fr);
+
+  }
 }
 
 
+
+
+
+
+
+ 
 

@@ -1,4 +1,4 @@
-var albumPicasso = {
+var albumApolloBay = {
      artist: 'Apollo Bay',
      songs: [
        { title: 'Me Again', duration: 161.71, audioUrl: 'assets/music/blue' },
@@ -19,7 +19,7 @@ var albumPicasso = {
  var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
-      + '  <td class="song-item-number" data-song-number="' + songNumber + '">' + songNumber + '</td>'
+      + '  <td class="song-item-number" data-song-number="' + songNumber + '">' + playButtonTemplate + '</td>'
       + '  <td class="song-item-title">' + songName + '</td>'
       + '   <td class="song-item-duration">' + filterTimeCode(songLength) + '</td>'
       + '</tr>'
@@ -37,7 +37,7 @@ var albumPicasso = {
              var currentlyPlayingCell = getSongNumberCell(currentlyPlayingSongNumber);
 
              currentlyPlayingCell = getSongNumberCell(currentlyPlayingSongNumber);
-             currentlyPlayingCell.html(currentlyPlayingSongNumber);
+             currentlyPlayingCell.html(playButtonTemplate);
          }
 
           if (currentlyPlayingSongNumber !== songNumber) {
@@ -67,46 +67,15 @@ var albumPicasso = {
           }
   };
 
-     var onHover = function(event) {
-       var songNumberCell = $(this).find('.song-item-number');
-      var songNumber = parseInt(songNumberCell.attr('data-song-number'));
-
-      if (songNumber !== currentlyPlayingSongNumber) {
-          songNumberCell.html(playButtonTemplate);
-      }
-     };
-     var offHover = function(event) {
-       var songNumberCell = $(this).find('.song-item-number');
-      var songNumber = parseInt(songNumberCell.attr('data-song-number'));
-
-      if (songNumber !== currentlyPlayingSongNumber) {
-          songNumberCell.html(songNumber);
-      }
-      console.log("songNumber type is " + typeof songNumber + "\n and currentlyPlayingSongNumber type is " + typeof currentlyPlayingSongNumber);
-     };
-
-
      $row.find('.song-item-number').click(clickHandler);
-    // #2
-    $row.hover(onHover, offHover);
-    // #3
-    return $row;
+     return $row;
  };
 
- var $albumTitle = $('.album-view-title');
-    var $albumArtist = $('.album-view-artist');
-    var $albumReleaseInfo = $('.album-view-release-info');
-    var $albumImage = $('.album-cover-art');
     var $albumSongList = $('.album-view-song-list');
 
  var setCurrentAlbum = function(album) {
    currentAlbum = album;
-   $albumTitle.text(album.title);
-   $albumArtist.text(album.artist);
-   $albumReleaseInfo.text(album.year + ' ' + album.label);
-   $albumImage.attr('src', album.albumArtUrl);
-
-     $albumSongList.empty();
+   $albumSongList.empty();
 
 
      for (var i = 0; i < album.songs.length; i++) {
@@ -238,16 +207,15 @@ var nextSong = function() {
 
     setSong(currentSongIndex + 1);
     currentSoundFile.play();
-
-
+    updateSeekBarWhileSongPlays();
     updatePlayerBarSong();
 
-    var $nextSongNumberCell = getSongNumberCell(currentlyPlayingSongNumber);
 
+    var $nextSongNumberCell = getSongNumberCell(currentlyPlayingSongNumber);
     var $lastSongNumberCell = getSongNumberCell(lastSongNumber);
 
     $nextSongNumberCell.html(pauseButtonTemplate);
-    $lastSongNumberCell.html(lastSongNumber);
+    $lastSongNumberCell.html(playButtonTemplate);
 };
 
 var previousSong = function() {
@@ -262,18 +230,22 @@ var previousSong = function() {
 
     var lastSongNumber = currentlyPlayingSongNumber;
 
+    setSong(currentSongIndex + 1);
+    currentSoundFile.play();
+    updateSeekBarWhileSongPlays();
+    updatePlayerBarSong();
+
 
     currentlyPlayingSongNumber = currentSongIndex + 1;
     currentSongFromAlbum = currentAlbum.songs[currentSongIndex];
-    updatePlayerBarSong();
 
     $('.main-controls .play-pause').html(playerBarPauseButton);
 
-    setSong(currentSongIndex + 1);
-    currentSoundFile.play();
+    var $previousSongNumberCell = getSongNumberCell(currentlyPlayingSongNumber);
+    var $nextSongNumberCell = getSongNumberCell(lastSongNumber);
 
     $previousSongNumberCell.html(pauseButtonTemplate);
-    $lastSongNumberCell.html(lastSongNumber);
+    $nextSongNumberCell.html(playButtonTemplate);
 };
 
 var setSong = function(songNumber) {
@@ -339,28 +311,62 @@ var setSong = function(songNumber) {
 
 
     $(document).ready(function() {
-     setCurrentAlbum(albumPicasso);
+     setCurrentAlbum(albumApolloBay);
      setupSeekBars();
      $previousButton.click(previousSong);
      $nextButton.click(nextSong);
      $playPauseButton.click(togglePlayFromPlayerBar);
 
   });
-     var albums = [albumPicasso];
+     var albums = [albumApolloBay];
      var index = 1;
 
 
 
-     var vid1 = document.querySelector("#vid1");
-     var vid2 = document.querySelector("#vid2");
+
+
+let vidSelectArr = [
+    document.querySelector("#vid1"),
+    document.querySelector("#vid2"),
+    document.querySelector("#vid3"),
+    document.querySelector("#vid4"),
+    document.querySelector("#vid5"),
+    document.querySelector("#vid6"),
+    document.querySelector("#vid7"),
+    document.querySelector("#vid8"),
+    document.querySelector("#vid9"),
+    document.querySelector("#vid10"),
+    document.querySelector("#vid11")
+     ];
+
      var mainVid = document.querySelector("#featuredVideo");
 
-     vid1.addEventListener("click", function(){
-       mainVid.src = "assets/ab-videos/ab-downOnNila-pb1.mp4";
-     });
+     let video = [
+       "assets/ab-videos/ab-downOnNila-pb1.mp4",
+       "assets/ab-videos/ab-nativeTrees-hob.mp4",
+       "assets/ab-videos/ab-myMurder-ckf.mp4",
+       "assets/ab-videos/ab-moldyMoney-hs.mp4",
+       "assets/ab-videos/ab-southernSoul-pb2.mp4",
+       "assets/ab-videos/ab-meAgain-pb1.mp4",
+       "assets/ab-videos/ab-ghostOutside-ckf.mp4",
+       "assets/ab-videos/ab-downOnNila-ckf.mp4",
+       "assets/ab-videos/ab-moldyMoney-pb1.mp4",
+       "assets/ab-videos/ab-winnabego-pb1.mp4",
+       "assets/ab-videos/ab-ghostOutside-pb1.mp4",
+       "assets/ab-videos/ab-winnabego-ckf.mp4",
+       "assets/ab-videos/ab-downOnNila-pb1.mp4"
+     ];
 
-     vid2.addEventListener("click", function(){
-       mainVid.src = "assets/ab-videos/ab-moldyMoney-pb1.mp4";
-     });
+for(let i=0; i<vidSelectArr.length; i++){
+  vidSelectArr[i].addEventListener("click",function(){
+    mainVid.src = video[i];
+  })
+};
+
+vid13.addEventListener("click", function(){
+window.open('https://www.youtube.com/channel/UCeqi1g__8xEz60tI7-w_4AQ/videos', '_blank');
+});
+
+
 
     

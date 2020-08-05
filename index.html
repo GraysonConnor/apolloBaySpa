@@ -3,6 +3,7 @@
 <head>
 	<title>APOLLO BAY</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -30,36 +31,70 @@
 </nav>
 
 <div id="sec1">
+  <div id="h1Container">
     <h1>APOLLO BAY</h1>
+  </div>
 </div>
  
  <div id="sec2">
- 	<h1>VIDEOS</h1>
- 	<div id="vidColumns">
+ 	<h2 class="sectionH2">VIDEOS</h2>
+
+
  		<div id="featuredVideoContainer">
  		<video id="featuredVideo" controls>
  			<source id="mainVidSource" src="assets/ab-videos/ab-winnabego-pb1.mp4" type="video/mp4">
  		</video>
  		</div>
- 		<div id="videoRightColumn">
- 		<p>MORE VIDEOS</p>
- 		<div id="videoSidebar">
- 				<img id="vid1" class="viditem" src="https://images.unsplash.com/photo-1578850390049-d5915d788268?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80">
- 				<img id="vid2" class="viditem" src="https://images.unsplash.com/photo-1593840108331-52227779615f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
- 				<img class="viditem" src="assets/testThumb.jpg">
- 				<img class="viditem" src="assets/testThumb.jpg">
- 				<img class="viditem" src="assets/testThumb.jpg">
- 				<img class="viditem" src="assets/testThumb.jpg">
- 				<img class="viditem" src="assets/testThumb.jpg">
- 				<img class="viditem" src="assets/testThumb.jpg">
- 				<img class="viditem" src="assets/testThumb.jpg">
- 		 </div>
- 		</div>
- 	</div>
- </div>
+
+    <h3>MORE VIDEOS</h3>
+
+<div id="videoScollBarContainer">
+      <div id="videoScollBar">
+  
+  <div class="vidItem" id="vid1"><img src="assets/images/downOnNila-pb1-thumb.png"alt="image name">
+  </div>
+  
+  <div class="vidItem" id="vid2"><img src="assets/images/nativeTrees-hob-thumb.png" alt="image name">
+  </div>
+  
+  <div class="vidItem" id="vid3"><img src="assets/images/myMurder-ckf-thumb.png" alt="image name">
+  </div>
+  
+  <div class="vidItem" id="vid4"><img src="assets/images/moldyMoney-hs-thumb.png" alt="image name">
+  </div>
+  
+  <div class="vidItem" id="vid5"><img src="assets/images/southernSoul-pb2-thumb.png" alt="image name">
+  </div>
+
+  <div class="vidItem" id="vid6"><img src="assets/images/meAgain-pb1-thumb.png" alt="image name">
+  </div>
+
+  <div class="vidItem" id="vid7"><img src="assets/images/ghostOutside-ckf-thumb.png" alt="image name">
+  </div>
+
+  <div class="vidItem" id="vid8"><img src="assets/images/downOnNila-ckf-thumb.png"alt="image name">
+  </div>
+
+  <div class="vidItem" id="vid9"><img src="assets/images/moldyMoney-pb1-thumb.png" alt="image name">
+  </div>
+
+  <div class="vidItem" id="vid10"><img src="assets/images/winnabego-pb1-thumb.png" alt="image name">
+  </div>
+
+  <div class="vidItem" id="vid11"><img src="assets/images/ghostOutside-pb1-thumb.png" alt="image name">
+  </div>
+
+  <div class="vidItem" id="vid12"><img src="assets/images/winnabego-ckf-thumb.png" alt="image name">
+  </div>
+
+  <div class="vidItem" id="vid13"><img src="assets/images/moreVideos.png" alt="image name">
+  </div>
+</div>
+</div>
+</div>
   
  <div id="sec3">
-    <h1>MUSIC</h1>
+    <h2 class="sectionH2">MUSIC</h2>
      <div class="album">
 
       <table class="album-view-song-list">
@@ -107,7 +142,68 @@
  </div>
     
  <div id="sec4">
-    <h1>MEMBERS</h1>
+    <h2 class="sectionH2">MEMBERS</h2>
+    <div id="memberContainer">
+    <div id="memberColumns">
+    <div id="tylerDiv" class="memberItem">
+      <img class="memberImg" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
+      <p>TYLER MCKINNEY</p>
+    </div>
+
+    <div id="jacobDiv" class="memberItem">
+      <img class="memberImg" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
+      <p>JACOB HOFFMAN</p>
+    </div>
+
+    <div id="caseyDiv" class="memberItem">
+      <img class="memberImg" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
+      <p>CASEY MORSE</p>
+    </div>
+
+    <div id="graysonDiv" class="memberItem">
+      <img class="memberImg" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
+      <p>GRAYSON CONNOR</p>
+    </div>
+
+    <div id="jonathanDiv" class="memberItem">
+      <img class="memberImg" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
+      <p>JONATHAN HOFFMAN</p>
+    </div>
+
+    <div id="marshallDiv" class="memberItem">
+      <img class="memberImg" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
+      <p>MARSHALL MCMANIGAL</p>
+    </div>
+
+    <div id="seanDiv" class="memberItem">
+      <img class="memberImg" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
+      <p>SEAN MATHES</p>
+    </div>
+
+    <div id="colbyDiv" class="memberItem">
+      <img class="memberImg" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
+      <p>COLBY HIX</p>
+    </div>
+
+    <div id="seanDiv" class="memberItem">
+      <img class="memberImg" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
+      <p>SEAN MATHES</p>
+    </div>
+
+    <div id="andrewDiv" class="memberItem">
+      <img class="memberImg" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
+      <p>ANDREW CACHO</p>
+    </div>
+
+    <div id="codyDiv" class="memberItem">
+      <img class="memberImg" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
+      <p>CODY FURH</p>
+    </div>
+  </div>
+</div>
+
+
+
  </div>
 
  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
