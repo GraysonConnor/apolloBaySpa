@@ -11,6 +11,11 @@ html, body{
   overflow-x: hidden;
 }
 
+.pageBody{
+  background-color: #000;
+  color: white;
+}
+
 #sec1{
   width: 100%;
   height: 100%;
@@ -54,7 +59,7 @@ font-size: 3.5rem;
 
 #sec2 h3{
   font-size: 1rem;
-  color: #383e44;
+  color: #585e66;
   margin-top: 4rem;
   margin-bottom: 1.5rem;
 }
@@ -179,6 +184,16 @@ white-space:nowrap;
 }
 
 
+#memberPrompt{
+  color: white;
+  font-size: .65rem;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
 
 #memberColumns {
   display: grid;
@@ -186,6 +201,7 @@ white-space:nowrap;
   grid-column-gap: 1em;
   grid-row-gap: .5rem;
   justify-items: center;
+
 }
 
 #memberContainer {
@@ -210,8 +226,43 @@ white-space:nowrap;
 background: #000;
 }
 
+.memberItem p.roles{
+  font-size: .75rem;
+  margin-top: -15px;
+  color: #585e66;
+}
+
+figure {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+
+
+/* Zoom In #1 */
+.memberItemImg figure img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.memberItemImg figure:hover img {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+
+
+
+
+
+
+
 .album{
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 .album-view-song-list {
@@ -432,6 +483,25 @@ background: #000;
     width: 5.75rem;
     vertical-align: middle;
 }
+
+#sec5{
+  width: 100%;
+}
+
+#aboutContainer{
+  width: 75%;
+  margin: 3rem auto;
+}
+
+.modal-body {
+  letter-spacing: 1px;
+
+}
+
+
+
+
+
 
 @media(min-width: 540px){
 

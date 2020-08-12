@@ -1,11 +1,11 @@
 var albumApolloBay = {
      artist: 'Apollo Bay',
      songs: [
-       { title: 'Me Again', duration: 161.71, audioUrl: 'assets/music/blue' },
-          { title: 'Karma', duration: 103.96, audioUrl: 'assets/music/green' },
-          { title: 'Native Trees', duration: 268.45, audioUrl: 'assets/music/red' },
-          { title: 'Southern Soul', duration: 153.14, audioUrl: 'assets/music/pink' },
-          { title: 'Bad Blood', duration: 374.22, audioUrl: 'assets/music/magenta' }
+       { title: 'Me Again', duration: 232.0, audioUrl: 'assets/music/meAgain' },
+          { title: 'Karma', duration: 312.0, audioUrl: 'assets/music/karma' },
+          { title: 'Native Trees', duration: 250.0, audioUrl: 'assets/music/nativeTrees' },
+          { title: 'Southern Soul', duration: 258.0, audioUrl: 'assets/music/southernSoul' },
+          { title: 'Moldy Money', duration: 216.0, audioUrl: 'assets/music/moldyMoney' }
       ]
  };
  function forEach(array,callback) {
@@ -255,7 +255,7 @@ var setSong = function(songNumber) {
      currentlyPlayingSongNumber = parseInt(songNumber);
      currentSongFromAlbum = currentAlbum.songs[songNumber - 1] ;
      currentSoundFile = new buzz.sound(currentSongFromAlbum.audioUrl, {
-       formats: [ 'mp3' ],
+       formats: [ 'm4a' ],
        preload: true
    });
    setVolume(currentVolume);
