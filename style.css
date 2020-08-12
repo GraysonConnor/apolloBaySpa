@@ -258,7 +258,21 @@ figure {
 
 
 
+.trackBtn{
+  width: 10px;
+  margin-top: 5px;
+  margin-right: 9px;
+}
 
+
+.playerBarBtn{
+  width: 21px;
+  margin-top: -7px;
+}
+
+.next-previous{
+  width: 15px;
+}
 
 
 .album{
@@ -541,6 +555,11 @@ figure {
   grid-template-columns: repeat(3,1fr);
   grid-column-gap: .5em;
  }
+
+ .trackBtn{
+  margin-right: 0px;
+}
+
 }
 
 

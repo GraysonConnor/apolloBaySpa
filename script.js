@@ -295,10 +295,10 @@ var setSong = function(songNumber) {
 
 
 
- var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
- var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause"></span></a>';
- var playerBarPlayButton = '<span class="ion-play"></span>';
- var playerBarPauseButton = '<span class="ion-pause"></span>';
+ var playButtonTemplate = '<a class="album-song-button"><img class="trackBtn" src="assets/images/play-button2.png"></a>';
+ var pauseButtonTemplate = '<a class="album-song-button"><img class="trackBtn" src="assets/images/pause-button.png"></a>';
+ var playerBarPlayButton = '<img class="playerBarBtn" src="assets/images/play-button2.png">';
+ var playerBarPauseButton = '<img class="playerBarBtn" src="assets/images/pause-button.png">';
 
  var currentAlbum = null;
  var currentlyPlayingSongNumber = null;
