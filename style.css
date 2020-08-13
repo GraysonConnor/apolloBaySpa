@@ -500,7 +500,7 @@ figure {
 }
 
 .player-bar .volume .seek-bar {
-    display: inline-block;
+    display: none;
     width: 5.75rem;
     vertical-align: middle;
 }
@@ -554,7 +554,15 @@ figure {
   .vidItem img{
     width: 12rem;
   }
+  .player-bar .volume .seek-bar {
+    display: inline-block;
+    width: 5.75rem;
+    vertical-align: middle;
+}
 
+.album-view-song-list{
+  margin-top: 7rem;
+}
 
 }
 
@@ -633,6 +641,5 @@ figure {
     .album-view-song-list {
          position: relative;
          width: 80%;
-         
      }
 }
