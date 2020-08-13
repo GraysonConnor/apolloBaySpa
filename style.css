@@ -276,12 +276,12 @@ figure {
 
 
 .album{
-  margin-top: 4rem;
+  /*margin-top: 4rem;*/
 }
 
 .album-view-song-list {
      width: 90%;
-     margin: 1.5rem auto;
+     margin: 0 auto;
      font-weight: 300;
      font-size: 0.75em;
      border-collapse: collapse;
@@ -327,10 +327,10 @@ figure {
      bottom: 0;
      left: 0;
      right: 0;
-     height: 200px;
+
+     height: 11rem;
      background-color:rgba(255,255,255,.3);
      z-index: 100;
-     margin-top: 2rem;
  }
 
  .player-bar a {
@@ -346,9 +346,10 @@ figure {
 
  .player-bar .container {
      display: table;
-     padding: 0;
+     padding:0;
      width: 90%;
      min-height: 100%;
+     
  }
 
  .player-bar .control-group {
@@ -361,6 +362,8 @@ figure {
      text-align: left;
      padding-right: 1rem;
  }
+
+ 
 
  .player-bar .main-controls .previous {
      margin-right: 16.5%;
@@ -392,7 +395,7 @@ figure {
 
  .player-bar .currently-playing .song-name,
  .player-bar .currently-playing .artist-song-mobile {
-     top: 1.1rem;
+     top: 2.1rem;
  }
 
  .player-bar .currently-playing .artist-name {
@@ -426,6 +429,9 @@ figure {
     border-radius: 2px;
     position: relative;
     cursor: pointer;
+    margin-bottom: -3.5rem;
+    
+
 }
 
 .seek-bar .fill {
@@ -464,6 +470,7 @@ figure {
  .player-bar .volume {
      width: 25%;
      text-align: right;
+      margin-bottom: -4rem;
  }
 
 
@@ -512,10 +519,11 @@ figure {
 
 }
 
-
-
-
-
+@media(min-width: 375px){
+  .album-view-song-list{
+    margin-top: 2rem;
+  }
+}
 
 @media(min-width: 540px){
 
@@ -604,11 +612,6 @@ figure {
 
     .player-bar .currently-playing .artist-song-mobile {
         display: block;
-        margin-top: 1.5rem;
-    }
-
-    .control-group.volume{
-      margin-top: 1.5rem;
     }
 }
 
@@ -629,8 +632,7 @@ figure {
  @media (max-width: 1024px) and (min-width: 320px) {
     .album-view-song-list {
          position: relative;
-         top: 1rem;
          width: 80%;
-         margin: auto;
+         
      }
 }
