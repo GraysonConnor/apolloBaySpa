@@ -467,7 +467,7 @@ figure {
 }
 
 
- .player-bar .volume {
+ .player-bar .volume{
      width: 25%;
      text-align: right;
       margin-bottom: -4rem;
