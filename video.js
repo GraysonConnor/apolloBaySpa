@@ -30,6 +30,21 @@ let video = {
        "assets/ab-videos/ab-ghostOutside-pb1.mp4",
        "assets/ab-videos/ab-winnabego-ckf.mp4"
      ],
+
+     videoPosterSrc: [
+       "assets/images/downOnNila-pb1-thumb.png",
+       "assets/images/nativeTrees-hob-thumb.png",
+       "assets/images/myMurder-ckf-thumb.png",
+       "assets/images/moldyMoney-hs-thumb.png",
+       "assets/images/southernSoul-pb2-thumb.png",
+       "assets/images/meAgain-pb1-thumb.png",
+       "assets/images/ghostOutside-ckf-thumb.png",
+       "assets/images/downOnNila-ckf-thumb.png",
+       "assets/images/moldyMoney-pb1-thumb.png",
+       "assets/images/winnabego-pb1-thumb.png",
+       "assets/images/ghostOutside-pb1-thumb.png",
+       "assets/images/winnabego-ckf-thumb.png"
+     ],
     mainVid: document.querySelector("#featuredVideo"),
     videoTitleOutput: document.querySelector("#videoTitleOutput"),
 
@@ -50,6 +65,7 @@ let video = {
 for(let i=0; i<video.vidSelectArr.length; i++){
   video.vidSelectArr[i].addEventListener("click",function(){
     video.mainVid.src = video.videoSrc[i];
+    video.mainVid.setAttribute("poster", video.videoPosterSrc[i]);
     video.videoTitleOutput.innerHTML = video.videoTitle[i];
   })
 };
