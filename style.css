@@ -547,6 +547,7 @@ figure {
 
   #h1Container h1{
     font-size: 5rem;
+    font-weight: lighter;
   }
 
   #featuredVideoContainer{
@@ -594,6 +595,10 @@ figure {
   margin: 2rem auto;
   font-size: 1rem;
   font-weight: lighter;
+}
+
+#h1Container h1{
+  font-size: 7rem;
 }
 }
 
