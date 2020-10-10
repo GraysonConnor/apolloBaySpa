@@ -46,7 +46,7 @@ font-size: 3.5rem;
  margin: 0 auto;
  width: 15.5rem;
  font-weight: bold;
- color: #C0C0C0;
+ color: white/*#C0C0C0*/;
  letter-spacing: 10px;
  z-index: 1;
 }
@@ -146,15 +146,14 @@ font-size: 3.5rem;
   width: 100%;
 }
 
-
-
-
 #videoScollBarContainer{
   background: #000;
    height: 150px;
     width: 75%;
     position: relative;
     margin: 0 auto;
+    display: grid;
+
 }
 
 
@@ -163,7 +162,8 @@ width: 100%;
 position: absolute;
 overflow:scroll;
 overflow-y: hidden;
-white-space:nowrap; 
+white-space:nowrap;
+grid-template-columns: 3fr 60px; 
 
 }
 
