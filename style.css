@@ -138,13 +138,14 @@ font-size: 3.5rem;
 
 #featuredVideoContainer {
   margin: 10px auto;
-  width: 100%;
+  width: 85%;
   background: #000;
 }
 
 #featuredVideo{
   width: 100%;
-  border: .05px solid gray;
+  border-top: .05px solid gray;
+  border-bottom: .05px solid gray;
 
 }
 
@@ -187,7 +188,7 @@ white-space:nowrap;
   height: 100%;
   display: inline-block;
   border-top: .5px solid gray;
-  border: .5px solid gray;
+  border-top: .5px solid gray;
 }
 
 .vidItem img{
@@ -634,6 +635,10 @@ figure {
 .righty{
    right: 2.5rem;
   bottom: 6.5rem;
+}
+
+.vidItem{
+  border-bottom: .05px solid gray;
 }
 
 }
