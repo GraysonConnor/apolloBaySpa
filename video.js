@@ -73,3 +73,24 @@ for(let i=0; i<video.vidSelectArr.length; i++){
 vid13.addEventListener("click", function(){
 window.open('https://www.youtube.com/channel/UCeqi1g__8xEz60tI7-w_4AQ/videos', '_blank');
 });
+
+
+
+
+
+
+
+const container = document.querySelector(".container");
+const lefty = document.querySelector(".lefty");
+let translate = 0;
+
+lefty.addEventListener("click", function() {
+    translate += 200;
+    container.style.transform = "translateX(" + translate + "px" + ")";
+});
+
+const righty = document.querySelector(".righty");
+righty.addEventListener("click", function() {
+    translate -= 200;
+    container.style.transform = "translateX(" + translate + "px" + ")";
+});

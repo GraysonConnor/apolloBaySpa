@@ -144,6 +144,8 @@ font-size: 3.5rem;
 
 #featuredVideo{
   width: 100%;
+  border: .05px solid gray;
+
 }
 
 #videoScollBarContainer{
@@ -152,7 +154,6 @@ font-size: 3.5rem;
     width: 75%;
     position: relative;
     margin: 0 auto;
-    display: grid;
 
 }
 
@@ -163,8 +164,6 @@ position: absolute;
 overflow:scroll;
 overflow-y: hidden;
 white-space:nowrap;
-grid-template-columns: 3fr 60px; 
-
 }
 
 #videoTitleOutput{
@@ -187,6 +186,8 @@ grid-template-columns: 3fr 60px;
 .vidItem{
   height: 100%;
   display: inline-block;
+  border-top: .5px solid gray;
+  border: .5px solid gray;
 }
 
 .vidItem img{
@@ -194,6 +195,53 @@ grid-template-columns: 3fr 60px;
   border-radius: 3%;
   
 }
+
+
+
+/*new scroll*/
+.outer {
+  
+  overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.container {
+  display: flex;
+  transition: transform .4s ease-in;
+}
+
+.inner {
+  flex: 0 0 25%;
+  height: 100px;
+  margin:10px;
+}
+.paddle {
+  position: relative;
+  width: 1.5rem;
+}
+.lefty {
+  float: left;
+  z-index:1;
+  left: .5rem;
+  top: 2rem;
+}
+.righty{
+  float: right;
+   z-index:1;
+   right: .5rem;
+  bottom: 7.25rem;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 #memberPrompt{
@@ -575,6 +623,19 @@ figure {
   margin-top: 7rem;
 }
 
+.paddle {
+  width: 2.5rem;
+}
+
+.lefty {
+  left: 2.5rem;
+  top: 2.85rem;
+}
+.righty{
+   right: 2.5rem;
+  bottom: 6.5rem;
+}
+
 }
 
 @media(min-width: 800px){
@@ -607,6 +668,14 @@ figure {
 
 #h1Container h1{
   font-size: 7rem;
+}
+
+.lefty {
+  left: 7rem;
+  
+}
+.righty{
+   right: 7rem;
 }
 }
 
