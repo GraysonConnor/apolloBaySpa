@@ -11,7 +11,7 @@ html, body{
 }
 
 #lpBody{
-background: url(assets/images/tylerLpBg2.png) no-repeat center center fixed; 
+background: url(assets/images/tylerLpBg2-min.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -146,6 +146,7 @@ font-size: 3.5rem;
   width: 100%;
   border-top: .05px solid gray;
   border-bottom: .05px solid gray;
+  outline: none;
 
 }
 
@@ -188,23 +189,18 @@ white-space:nowrap;
   height: 100%;
   display: inline-block;
   border-top: .5px solid gray;
-  border-top: .5px solid gray;
 }
 
 .vidItem img{
   width: 8rem;
-  border-radius: 3%;
-  
 }
 
 
 
 /*new scroll*/
 .outer {
-  
   overflow-x: hidden;
-    overflow-y: hidden;
-
+  overflow-y: hidden;
 }
 
 .container {
@@ -571,6 +567,11 @@ figure {
   margin: 1rem auto;
   font-size: 0.65rem;
   line-height: 1.75rem;
+}
+
+#aboutContainer p {
+  text-indent: 1.5rem;
+  letter-spacing: 4px; 
 }
 
 .modal-body {
